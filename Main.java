@@ -36,14 +36,14 @@ public class Main {
         swap (a,b);
 	    System.out.println("a = " + a + " and b = " + b);
 
-        //pass by value using wrapper class
+        //pass by value using wrapper class(reference)
         IntWrapper c = new IntWrapper(10);
         IntWrapper d = new IntWrapper(5);
         System.out.println("\n\nc = " + c.value + " and d = " + d.value);
         swap (c,d);
         System.out.println("c = " + c.value + " and d = " + d.value);
 
-        //pass by value (a reference)
+        //pass by value (array reference)
         int[] arr1 = {1,2,3,4,5};
         printArray(arr1);
         swap (arr1);
@@ -55,7 +55,7 @@ public class Main {
         newArray (arr1);
   	    printArray(arr1);
 
-        //pass by value an object
+        //pass by value an object(a note on Strings)
         String str1 = "Bubba Wubba";
         System.out.println(str1);
         changeString(str1);
@@ -146,7 +146,7 @@ public class Main {
 
     //** change string */
     public static void changeString(String str) {
-	    str += " is the best!";
+	    str += " is the best!";   //this is creating a new string - strings are immutable
         System.out.println(str);    
      
     }
